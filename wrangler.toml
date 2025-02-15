@@ -1,0 +1,6 @@
+name = "bilibili-helper"
+type = "javascript"
+
+kv_namespaces = [
+  { binding = "TEXT_STORE", id = "your_kv_namespace_id" }
+]
