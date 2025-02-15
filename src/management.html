@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Management</title>
+</head>
+<body>
+  <h1>Stored Texts</h1>
+  <ul id="text-list"></ul>
+  <script>
+    async function fetchTexts() {
+      const response = await fetch('/');
+      const texts = await response.json();
+      const textList = document.getElementById('text-list');
+      texts.forEach(text => {
+        const li = document.createElement('li');
+        li.textContent = text;
+        textList.appendChild(li);
+      });
+    }
+    fetchTexts();
+  </script>
+</body>
+</html>
